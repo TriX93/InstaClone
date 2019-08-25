@@ -2,6 +2,8 @@
 
 Simple project created to try StencilJS [https://stenciljs.com/]
 
+Demo [https://instaclone-250909.firebaseapp.com/]
+
 ## Objectives
 * ~~`@ionic/core` for the UI.
 * ~~Stencil for the application logic and routing
