@@ -1,0 +1,7 @@
+{
+  "appId": "me.vtrillo.instaclone",
+  "appName": "Instaclone",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}
