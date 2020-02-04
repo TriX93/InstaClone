@@ -2,6 +2,8 @@ import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk'; // add-on you may want
 import logger from 'redux-logger'; // add-on you may want
 
+declare var firebaseRef;
+
 import { combineReducers } from 'redux';
 
 // Import feature reducers and state interfaces.

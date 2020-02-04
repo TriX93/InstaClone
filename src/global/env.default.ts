@@ -4,6 +4,18 @@ export default {
 Copy this file to env.ts and change the value with your SDK Key
 */
 
+    // Retrieve your own options values by adding a web app on
+    // https://console.firebase.google.com
+    firebase : { 
+        apiKey: "PLEASE-MODIFY-ME",
+        authDomain: "PLEASE-MODIFY-ME",
+        databaseURL: "PLEASE-MODIFY-ME",
+        projectId: "PLEASE-MODIFY-ME",
+        storageBucket: "PLEASE-MODIFY-ME",
+        messagingSenderId: "PLEASE-MODIFY-ME",
+        appId: "PLEASE-MODIFY-ME"
+    },
+
     google: {
         apiKey: '[ GMaps apiKey goes here ]',
         style: [

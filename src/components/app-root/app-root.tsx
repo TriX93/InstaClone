@@ -1,7 +1,10 @@
 import { Component, h, Prop, State } from '@stencil/core';
 import { Store } from '@stencil/redux';   
 
+import { userLoginAction } from '../../store/user/actions'; 
+
 import { getInitalState, configureStore } from '../../store';
+import { Action } from '@stencil/redux';
 
 @Component({
   tag: 'app-root',
@@ -12,6 +15,8 @@ export class AppRoot {
   @Prop({ context: 'store' }) store: Store;
   @State() user: any;
 
+  userLoginAction: Action;
+  
   componentWillLoad() {
     // Only do this once, in the root component
     this.store.setStore(configureStore( getInitalState() ));
@@ -25,6 +30,8 @@ export class AppRoot {
         user
       }
     });
+
+    this.store.mapDispatchToProps( this, { userLoginAction } );
   }
   
   render() {
