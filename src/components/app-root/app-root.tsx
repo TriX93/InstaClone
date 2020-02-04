@@ -37,6 +37,7 @@ export class AppRoot {
       <ion-route url="/map" component="tab-map"></ion-route>
       </ion-route>
       <ion-route url="/profile/:name" component="page-profile" />
+      <ion-route url="/login" component="page-login" />
       </ion-router>
       <ion-router-outlet></ion-router-outlet>
       </ion-app>

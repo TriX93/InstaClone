@@ -10,10 +10,12 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface AppHeader {
+    'isLogin': boolean;
     'title': string;
   }
   interface AppRoot {}
   interface GoogleMap {}
+  interface PageLogin {}
   interface PageTabs {}
   interface TabHome {}
   interface TabMap {}
@@ -40,6 +42,12 @@ declare global {
     new (): HTMLGoogleMapElement;
   };
 
+  interface HTMLPageLoginElement extends Components.PageLogin, HTMLStencilElement {}
+  var HTMLPageLoginElement: {
+    prototype: HTMLPageLoginElement;
+    new (): HTMLPageLoginElement;
+  };
+
   interface HTMLPageTabsElement extends Components.PageTabs, HTMLStencilElement {}
   var HTMLPageTabsElement: {
     prototype: HTMLPageTabsElement;
@@ -61,6 +69,7 @@ declare global {
     'app-header': HTMLAppHeaderElement;
     'app-root': HTMLAppRootElement;
     'google-map': HTMLGoogleMapElement;
+    'page-login': HTMLPageLoginElement;
     'page-tabs': HTMLPageTabsElement;
     'tab-home': HTMLTabHomeElement;
     'tab-map': HTMLTabMapElement;
@@ -69,10 +78,12 @@ declare global {
 
 declare namespace LocalJSX {
   interface AppHeader extends JSXBase.HTMLAttributes<HTMLAppHeaderElement> {
+    'isLogin'?: boolean;
     'title'?: string;
   }
   interface AppRoot extends JSXBase.HTMLAttributes<HTMLAppRootElement> {}
   interface GoogleMap extends JSXBase.HTMLAttributes<HTMLGoogleMapElement> {}
+  interface PageLogin extends JSXBase.HTMLAttributes<HTMLPageLoginElement> {}
   interface PageTabs extends JSXBase.HTMLAttributes<HTMLPageTabsElement> {}
   interface TabHome extends JSXBase.HTMLAttributes<HTMLTabHomeElement> {}
   interface TabMap extends JSXBase.HTMLAttributes<HTMLTabMapElement> {}
@@ -81,6 +92,7 @@ declare namespace LocalJSX {
     'app-header': AppHeader;
     'app-root': AppRoot;
     'google-map': GoogleMap;
+    'page-login': PageLogin;
     'page-tabs': PageTabs;
     'tab-home': TabHome;
     'tab-map': TabMap;

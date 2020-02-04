@@ -26,9 +26,16 @@ export enum UserActionTypes {
 }
 
 
-export const appSetName = (user: User) => async (dispatch, _getState) => {
+export const userLoginAction = (user: User) => async (dispatch, _getState) => {
     return dispatch({
         type: TypeKeys.USER_LOGIN,
         user: user
+    })
+};
+
+export const userErrorAction = (error: User) => async (dispatch, _getState) => {
+    return dispatch({
+        type: TypeKeys.ERROR,
+        error: error
     })
 };
