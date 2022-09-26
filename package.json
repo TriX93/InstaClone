@@ -15,7 +15,7 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@capacitor/cli": "^1.1.1",
+    "@capacitor/cli": "^1.5.3",
     "@capacitor/core": "^1.1.1",
     "@ionic/core": "^4.7.1",
     "tslib": "^1.10.0"
